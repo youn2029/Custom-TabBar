@@ -17,6 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 루트 뷰 컨트롤러를 UITabBarController로 캐스팅
+        if let tbC = self.window?.rootViewController as? UITabBarController {
+            
+            // 탭 바 아이템 배열을 가져오기
+            if let tbItems = tbC.tabBar.items {
+                
+                // 탭 바 아이템의 이미지 설정
+                tbItems[0].image = UIImage(named: "calendar.png")
+                tbItems[1].image = UIImage(named: "file-tree.png")
+                tbItems[2].image = UIImage(named: "photo.png")
+                
+                // 탭 바 아이템의 타이틀 설정
+                tbItems[0].title = "calendar"
+                tbItems[1].title = "file"
+                tbItems[2].title = "photo"
+            }
+        }
+        
+        
         return true
     }
 
