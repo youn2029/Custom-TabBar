@@ -24,16 +24,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // 탭 바 아이템 배열을 가져오기
             if let tbItems = tbC.tabBar.items {
                 
-                // 탭 바 아이템의 이미지 설정
-                tbItems[0].image = UIImage(named: "calendar.png")
-                tbItems[1].image = UIImage(named: "file-tree.png")
-                tbItems[2].image = UIImage(named: "photo.png")
+                // 탭 바 아이템의 이미지 설정 (원본 이미지를 사용할 경우 / 기본값 : UIImage.ReanderingMode.alwaysTemplate)
+                tbItems[0].image = UIImage(named: "designbump@2x")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                tbItems[1].image = UIImage(named: "rss@2x")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                tbItems[2].image = UIImage(named: "facebook@2x")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                 
                 // 탭 바 아이템의 타이틀 설정
                 tbItems[0].title = "calendar"
                 tbItems[1].title = "file"
                 tbItems[2].title = "photo"
+                
+                // 같은 속성으로 설정하기 위한 반복문
+                for tbItem in tbItems {
+                    
+                    // 탭 바 아이템 전체를 selectedImage 속성 설정
+                    tbItem.selectedImage = UIImage(named: "checkmark@2x")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                    
+                    // 탭 바 아이템의 타이틀 속성 설정
+                    tbItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .disabled)
+                    tbItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .selected)
+                    
+                    // 탭 바 아이템의 타이틀 글자크기 설정
+                    tbItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
+                }
             }
+            
+            tbC.tabBar.tintColor = UIColor.white        // 활성화된 탭 바 색상 설정
+            
+            tbC.tabBar.backgroundImage = UIImage(named: "menubar-bg-mini.png")  // 탭 바의 배경이미지 설정
+            
+            // 탭 바의 이미지 설정 (신축성 옵션 설정)
+//            let image = UIImage(named: "connectivity-bar")?.stretchableImage(withLeftCapWidth: 50, topCapHeight: 0)
+//            tbC.tabBar.backgroundImage = image
+            
+            // 탭 바의 색상 설정
+//            tbC.tabBar.barTintColor = UIColor.black
+            
+            // 이미지를 barTintColor 속성에 UIImage(patternImage:)를 이용하여 설정
+//            let image = UIImage(named: "menubar-bg-mini")!
+//            tbC.tabBar.barTintColor = UIColor(patternImage: image)
+            
+            // 탭 바 영역보다 큰 이미지일 경우
+//            let image = UIImage(named: "homes_119")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 0)
+//            tbC.tabBar.backgroundImage = image
+//            tbC.tabBar.clipsToBounds = true     // 탭 바 영역에서 벗어나는 부분을 잘라내는 속성
+            
+            
+            
+            
+            
         }
         
         
