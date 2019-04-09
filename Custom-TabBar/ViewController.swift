@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.swift
 //  Custom-TabBar
 //
@@ -27,7 +27,21 @@ class ViewController: UIViewController {
         
         
     }
-
+    
+    // 터치가 끝났을 때 호출되는 메소드 (화면 전체에서 발생하는 터치 액션을 처리)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let tabBar = self.tabBarController?.tabBar
+//        tabBar?.isHidden = (tabBar?.isHidden == true) ? false : true
+        
+        // 애니메이션 효과를 주기 위한 메소드
+        UIView.animate(withDuration: TimeInterval(0.15)){
+            
+            // 호출될 때마다 점점 투명해졌다가 점점 진해짐
+            tabBar?.alpha = (tabBar?.alpha == 0 ? 1 : 0)
+            
+        }
+    }
 
 }
 
