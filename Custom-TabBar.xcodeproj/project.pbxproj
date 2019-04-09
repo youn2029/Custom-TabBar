@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E040909225C82F70029CECB /* NewAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E040908225C82F70029CECB /* NewAppDelegate.swift */; };
 		4EFFF2D3225B62B600A601C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFF2D2225B62B600A601C7 /* AppDelegate.swift */; };
 		4EFFF2D5225B62B600A601C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFF2D4225B62B600A601C7 /* ViewController.swift */; };
 		4EFFF2D8225B62B600A601C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFFF2D6225B62B600A601C7 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E040908225C82F70029CECB /* NewAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppDelegate.swift; sourceTree = "<group>"; };
 		4EFFF2CF225B62B600A601C7 /* Custom-TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom-TabBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFFF2D2225B62B600A601C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EFFF2D4225B62B600A601C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				4EFFF2D2225B62B600A601C7 /* AppDelegate.swift */,
+				4E040908225C82F70029CECB /* NewAppDelegate.swift */,
 				4EFFF2D4225B62B600A601C7 /* ViewController.swift */,
 				4EFFF2D6225B62B600A601C7 /* Main.storyboard */,
 				4EFFF2E7225B639200A601C7 /* SecondViewController.swift */,
@@ -207,6 +210,7 @@
 				4EFFF2E8225B639200A601C7 /* SecondViewController.swift in Sources */,
 				4EFFF2DB225B62B600A601C7 /* Custom_TabBar.xcdatamodeld in Sources */,
 				4EFFF2EA225B639F00A601C7 /* ThirdViewController.swift in Sources */,
+				4E040909225C82F70029CECB /* NewAppDelegate.swift in Sources */,
 				4EFFF2D5225B62B600A601C7 /* ViewController.swift in Sources */,
 				4EFFF2D3225B62B600A601C7 /* AppDelegate.swift in Sources */,
 			);
